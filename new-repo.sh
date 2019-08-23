@@ -40,7 +40,7 @@ else
 	sudo git init --bare
 	cd ..
 	printf "${D_COLOR}Giving ownership of folders to '%s'${NO_COLOR}\n" $GIT_USER
-	sudo chown -R $GIT_USER:$GIT_GROUP $1
+	sudo chown -R $GIT_USER:$GIT_GROUP $1$GIT_END
 	printf "${D_COLOR}Complete.\nDon't forget to add this server to your git remote via:${NO_COLOR}\n"
 	printf "${H_COLOR}git remote add %s ssh://%s@%s:%s%s/%s%s${NO_COLOR}\n" $GIT_REMOTE_NAME $GIT_USER $L_IP $GIT_REMOTE_PORT $GIT_DIR $1 $GIT_END
 fi
